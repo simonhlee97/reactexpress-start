@@ -43,7 +43,7 @@ app.get('/posts', (req, res) => {
 	})
 })
 
-app.get('/posts/add', (req, res) => {
+app.get('/add', (req, res) => {
 	const {title, post} = req.query;
 	const INSERTQUERY = `INSERT INTO posts (title, post) VALUES ('${title}', '${post}')`;
 	con.query(INSERTQUERY, (err, results) => {
